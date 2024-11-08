@@ -12,8 +12,6 @@ function Get-ModuleManifest {
     }
 }
 
-Export-ModuleMember -Function Send-Mail
-
 # Import necessary modules
 Import-Module -Name Microsoft.PowerShell.SecretManagement -ErrorAction SilentlyContinue
 
@@ -132,3 +130,6 @@ function Send-Mail {
         Write-Output "Failed to send email."
     }
 }
+
+# Export the functions
+Export-ModuleMember -Function Send-Mail
